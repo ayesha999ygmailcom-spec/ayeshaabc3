@@ -248,10 +248,6 @@ joblib.dump(rf_clf, rf_model_path, compress=3)
 for path in [dt_model_path, rf_model_path]:
     size_bytes = os.path.getsize(path)
     size_mb = size_bytes / (1024 * 1024)
-    print(f"{path}: {size_mb:.4f} MB ({(size_bytes/1024):.2f} KB)")
+    st.write(f"{path}: {size_mb:.4f} MB ({(size_bytes/1024):.2f} KB)")
 
-from google.colab import files
 
-# Download the models to your local machine
-files.download('decision_tree_model.joblib')
-files.download('random_forest_model.joblib')
