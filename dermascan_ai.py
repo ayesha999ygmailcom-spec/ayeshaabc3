@@ -9,7 +9,7 @@ Original file is located at
 # HAM10000 Dataset - Exploratory Data Analysis (EDA)
 We will explore the metadata of the HAM10000 dataset ("Human Against Machine"), which is a large collection of multi-source dermatoscopic images of common pigmented skin lesions.
 """
-
+import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
