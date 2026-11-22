@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load the metadata
-df = pd.read_csv('/content/HAM10000_metadata.csv')
+df = pd.read_csv('HAM1000_metadata.csv')
 
 # Display basic information
 print("Dataset Shape:", df.shape)
