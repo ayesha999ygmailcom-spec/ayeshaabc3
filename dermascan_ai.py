@@ -58,7 +58,7 @@ axes[1, 1].set_title('Validation Type (dx_type)')
 axes[1, 1].set_xticklabels(axes[1, 1].get_xticklabels(), rotation=45)
 
 plt.tight_layout()
-plt.show()
+()
 
 """### Age Distribution of Patients"""
 
@@ -67,7 +67,7 @@ sns.histplot(df['age'].dropna(), bins=20, kde=True, color='skyblue')
 plt.title('Age Distribution of Patients')
 plt.xlabel('Age')
 plt.ylabel('Count')
-plt.show()
+()
 
 """## Data Preprocessing, Splitting (80/20), and Decision Tree Classification"""
 
@@ -120,7 +120,7 @@ sns.heatmap(cm, annot=True, fmt='d', xticklabels=clf.classes_, yticklabels=clf.c
 plt.ylabel('Actual')
 plt.xlabel('Predicted')
 plt.title('Confusion Matrix - Decision Tree')
-plt.show()
+()
 
 """## Advanced AI Modeling: Random Forest Classifier
 To improve performance and handle class imbalance better, we will train a Random Forest ensemble classifier.
@@ -158,7 +158,7 @@ axes[1].set_ylabel('Actual')
 axes[1].set_xlabel('Predicted')
 
 plt.tight_layout()
-plt.show()
+()
 
 """### Prediction Samples: Actual vs. Predicted Labels
 We will select 10 random samples from our testing dataset and compare their actual ground-truth diagnoses with the predictions made by both the baseline Decision Tree and our balanced Random Forest model.
@@ -184,7 +184,7 @@ comparison_df = pd.DataFrame({
     'Predicted (Random Forest)': sample_preds_rf
 })
 
-display(comparison_df.reset_index(drop=True))
+st.dataframe(comparison_df.reset_index(drop=True))
 
 """### Visualizing Actual vs. Predicted Labels for the 10 Samples
 Let's plot the comparison using a grouped categorical plot to visually see which model matches the actual diagnosis for each sample.
@@ -206,7 +206,7 @@ plt.xlabel('Sample Index (Original Data)')
 plt.ylabel('Count of Class References')
 plt.legend(title='Diagnoses', bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.grid(axis='y', linestyle='--', alpha=0.5)
-plt.show()
+st.pyplot(plt.gcf())
 
 # Direct side-by-side comparative timeline
 plt.figure(figsize=(15, 5))
@@ -227,7 +227,7 @@ plt.xlabel('Sample ID')
 plt.ylabel('Class Label Code')
 plt.legend(loc='upper right')
 plt.grid(True, linestyle=':', alpha=0.6)
-plt.show()
+()
 
 """### Saving Models and Verifying File Size (< 25 MB)
 We will use `joblib` with compression to save both models to disk and verify that their sizes remain well below the 25 MB threshold.
