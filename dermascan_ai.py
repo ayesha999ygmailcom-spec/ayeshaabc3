@@ -18,10 +18,8 @@ import seaborn as sns
 # Load the metadata
 from pathlib import Path
 
-BASE DIR =
-Path(__file__).resolve().parent
-scv_path = BASE_DIR /
-"HAM10000_metadata.csv"
+BASE_DIR = Path(__file__).resolve().parent
+csv_path = BASE_DIR / "HAM10000_metadata.csv"
 
 df = pd.read_csv(csv_path)
 
