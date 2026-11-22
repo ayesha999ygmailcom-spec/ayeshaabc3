@@ -26,7 +26,7 @@ df = pd.read_csv(csv_path)
 # Display basic information
 print("Dataset Shape:", df.shape)
 st.write(df.head())
-display(df.head())
+
 
 """### Check for Missing Values"""
 
